@@ -7,26 +7,15 @@ Created: 09.01.2026
 Version: 1.0
 Description: 
 """
-from pysat.formula import CNF
 import argparse
-import random
-import ipywidgets as widgets
-from IPython.display import display
-import os
-import time
 import datetime
-import subprocess
-import tempfile
-from dataclasses import dataclass
-import subprocess
-import tempfile
-from dataclasses import dataclass
 import os
+import random
+import subprocess
+import time
+from dataclasses import dataclass
 import pandas as pd
 from tqdm import tqdm
-import time
-
-
 
 # define constatnt
 
@@ -198,10 +187,10 @@ def run_experiment(repeat_for_instances, data_num_instances_per_n, alg_max_tries
             instances_filenames.append(cnf_filepath)
 
 
-    status = widgets.Text(value='', description='Status:')
-    # make it wider
-    status.layout.width = '800px'
-    display(status)
+    # status = widgets.Text(value='', description='Status:')
+    # # make it wider
+    # status.layout.width = '800px'
+    # display(status)
 
 
     for idx, cnf_filepath in enumerate(tqdm(instances_filenames, desc="Processing instances", position=0)):
